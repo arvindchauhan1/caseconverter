@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Conversion Tool</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body data-theme="light">
+
+    <header>
+        <h1>Case Conversion Tool</h1>
+        <div class="mode-switch">
+            <label class="switch">
+                <input type="checkbox" id="mode-switch">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </header>
+    <div class="container">
+
+        <div class="find-replace">
+            <input type="text" id="find-input" placeholder="Find">
+            <input type="text" id="replace-input" placeholder="Replace">
+            <button onclick="findAndReplace()">Find and Replace</button>
+        </div>
+        <div class="options">
+            <!-- Case conversion options -->
+            <button onclick="convertText('sentenceCase')">Sentence Case</button>
+            <button onclick="convertText('titleCase')">Title Case</button>
+            <button onclick="convertText('lowerCase')">lower case</button>
+            <button onclick="convertText('upperCase')">UPPER CASE</button>
+            <button onclick="convertText('snakeCase')">snake_case</button>
+            <button onclick="convertText('dotCase')">dot.case</button>
+            <button onclick="convertText('hyphenCase')">hyphen-case</button>
+            <!-- Text manipulation options -->
+            <button onclick="clearText()">Clear Text</button>
+            <button onclick="copyText()">Copy Text</button>
+        </div>
+        <div class="input-output">
+            <textarea id="input-text" placeholder="Enter your text here..."></textarea>
+            <textarea id="output-text" placeholder="Output will appear here..." readonly></textarea>
+        </div>
+        <div class="remove-options">
+            <button onclick="removeCharacter('-')">Remove -</button>
+            <button onclick="removeCharacter('/')">Remove /</button>
+            <button onclick="removeCharacter('\\')">Remove \</button>
+            <button onclick="removeCharacter('>')">Remove &gt;</button>
+            <button onclick="removeCharacter('<')">Remove &lt;</button>
+            <button onclick="removeCharacter('.')">Remove .</button>
+            <button onclick="removeCharacter(',')">Remove ,</button>
+            <button onclick="removeCharacter('_')">Remove _</button>
+            <button onclick="removeExtraSpaces()">Remove Extra Spaces</button>
+            <button onclick="removeAllSpaces()">Remove All Spaces</button>
+            <button onclick="removeEnter()">Remove Enter</button>
+        </div>
+        <div class="apply-changes">
+            <button onclick="applyChanges()">Apply Changes</button>
+            <button onclick="undoChanges()">Undo</button>
+            <button onclick="saveText()">Save</button>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Case Conversion Tool</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
