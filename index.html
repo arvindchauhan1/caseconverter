@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,8 +37,8 @@
             <button onclick="convertText('dotCase')">dot.case</button>
             <button onclick="convertText('hyphenCase')">hyphen-case</button>
             <!-- Text manipulation options -->
-            <button onclick="clearText()">Clear Text</button>
-            <button onclick="copyText()">Copy Text</button>
+            <button onclick="clearText()" class="clear-text">Clear Text</button>
+            <button onclick="copyText()" class="copy-text">Copy Text</button>
         </div>
         <div class="input-output">
             <textarea id="input-text" placeholder="Enter your text here..."></textarea>
@@ -57,9 +58,9 @@
             <button onclick="removeEnter()">Remove Enter</button>
         </div>
         <div class="apply-changes">
-            <button onclick="applyChanges()">Apply Changes</button>
-            <button onclick="undoChanges()">Undo</button>
-            <button onclick="saveText()">Save</button>
+            <button onclick="applyChanges()" class="apply">Apply Changes</button>
+            <button onclick="undoChanges()" class="undo">Undo</button>
+            <button onclick="saveText()" class="save">Save</button>
         </div>
     </div>
     <footer>
